@@ -1,0 +1,27 @@
+// ==========================================================================
+// settings
+// ==========================================================================
+@import "../../../../assets/scss/settings/_variables";
+
+// ==========================================================================
+// tools
+// ==========================================================================
+@import "../../../../assets/scss/tools/functions/**";
+@import "../../../../assets/scss/tools/mixins/**";
+
+.top-hero {
+	margin-bottom: 150px;
+	text-align: center;
+	background: #78a3af;
+	img {
+		max-width: 100%;
+		vertical-align: top;
+		margin-bottom: -60px;
+	}
+	@include max-screen($BREAK_POINT_SM) {
+		margin-bottom: 35px;
+		img {
+			margin-bottom: 0;
+		}
+	}
+}

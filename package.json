@@ -1,0 +1,43 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "gulp sass",
+    "sprite:st": "gulp sprites --dir structures --prefix st && gulp imagemin",
+    "sprite:c": "gulp sprites --dir contents --prefix c && gulp imagemin",
+    "imagemin": "gulp imagemin",
+    "copy": "gulp copy",
+    "kss": "gulp sass && gulp kss",
+    "ejs": "gulp ejs",
+    "watch": "gulp watch",
+    "clean": "gulp clean",
+    "build": "gulp sprites --dir structures --prefix st && gulp sprites --dir contents --prefix c && gulp sass && gulp kss && gulp imagemin && gulp ejs && gulp copy && gulp watch",
+    "build:prod": "gulp clean && gulp sprites --dir structures --prefix st && gulp sprites --dir contents --prefix c && gulp sass --env production && gulp kss && gulp imagemin && gulp ejs --env production && gulp copy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "css-mqpacker": "^5.0.1",
+    "csswring": "^5.1.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-data": "^1.2.1",
+    "gulp-ejs": "^2.3.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-ejs": "^1.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-svg-sprites": "^4.0.2",
+    "gulp-watch": "^4.3.11",
+    "kss": "^3.0.0-beta.16",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2"
+  }
+}

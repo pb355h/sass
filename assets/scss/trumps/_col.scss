@@ -1,0 +1,21 @@
+$_col-columns: 12;
+
+@for $value from 1 through $_col-columns {
+	[data-u-col="#{$value}"] {
+		width: (100% / $_col-columns * $value);
+	}
+}
+@include max-screen($BREAK_POINT_MD) {
+	@for $value from 1 through $_col-columns {
+		[data-u-col-md="#{$value}"] {
+			width: (100% / $_col-columns * $value);
+		}
+	}
+}
+@include max-screen($BREAK_POINT_SM) {
+	@for $value from 1 through $_col-columns {
+		[data-u-col-sm="#{$value}"] {
+			width: (100% / $_col-columns * $value);
+		}
+	}
+}

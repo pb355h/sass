@@ -1,0 +1,20 @@
+.top-hero {
+  margin-bottom: 150px;
+  text-align: center;
+  background: #78a3af;
+}
+
+.top-hero img {
+  max-width: 100%;
+  vertical-align: top;
+  margin-bottom: -60px;
+}
+
+@media screen and (max-width: 600px) {
+  .top-hero {
+    margin-bottom: 35px;
+  }
+  .top-hero img {
+    margin-bottom: 0;
+  }
+}

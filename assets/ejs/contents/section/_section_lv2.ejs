@@ -1,0 +1,11 @@
+<% section_lv2 = function(data, block) { %>
+<section class="c-section" data-section-level="2">
+	<div class="c-section__inner">
+		<h2 class="c-heading-categoryTitle"><%= data.title %></h2>
+		<p class="c-heading-lead"><%= data.lead %></p>
+		<% if (block) { %>
+			<% block() %>
+		<% } %>
+	</div>
+</section>
+<% } %>

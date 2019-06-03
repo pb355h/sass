@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>STYLE GUIDE</title>
+
+<meta name="description" content="">
+<meta name="generator" content="kss-node">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="kss-assets/kss.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body id="kss-node">
+<header class="st-header" role="banner">
+<div class="st-header__content">
+<div class="st-header__inner">
+<p class="st-header__logo">
+<a href="#"><img class="st-header__logo__img" src="../assets/img/structures/logo.svg" alt="IMJ Group"></a>
+</p>
+<button id="js-header-navBtn" class="st-header__navBtn" aria-label="ナビゲーション" aria-controls="js-header-nav" aria-expanded="true">
+<span class="st-header__navBtn__icon js-header-navBtn__icon"></span>
+</button>
+<nav id="js-header-nav" class="st-header__nav" role="navigation">
+<ul class="st-header__globalNav">
+<li><a class="st-header__globalNav__link" href="#">SERVICE</a></li>
+<li><a class="st-header__globalNav__link" href="#">WORKS</a></li>
+<li><a class="st-header__globalNav__link" href="#">NEWS / SEMINAR</a></li>
+<li><a class="st-header__globalNav__link" href="#">COMPANY</a></li>
+<li><a class="st-header__globalNav__link" href="#">IMJ LAB.</a></li>
+<li><a class="st-header__globalNav__link" href="#">RECRUIT</a></li>
+</ul>
+<ul class="st-header__infoNav">
+<li><a class="st-header__english" href="#">ENGLISH</a></li>
+<li><a class="st-header__contact" href="#">CONTACT</a></li>
+<li>
+<div id="js-header-search" class="st-header__search" aria-label="サイト内検索" aria-controls="js-header-search__form" aria-expanded="false">
+<form id="js-header-search__form" class="st-header__search__form" role="search">
+<input class="st-header__search__input" type="text">
+<button class="st-header__search__button" type="submit"></button>
+</form>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<div class="kss-sidebar kss-style">
+<header class="kss-header">
+<h1 class="kss-doc-title">STYLE GUIDE</h1>
+</header>
+<nav class="kss-nav">
+<ul class="kss-nav__menu">
+<li class="kss-nav__menu-item">
+<a class="kss-nav__menu-link" href="./">
+<span class="kss-nav__ref">0</span
+><span class="kss-nav__name">Overview</span>
+</a>
+</li>
+<li class="kss-nav__menu-item">
+<a class="kss-nav__menu-link" href="section-1.html">
+<span class="kss-nav__ref">1</span><span class="kss-nav__name">Heading</span>
+</a>
+</li>
+<li class="kss-nav__menu-item">
+<a class="kss-nav__menu-link" href="section-2.html">
+<span class="kss-nav__ref">2</span><span class="kss-nav__name">Link</span>
+</a>
+</li>
+<li class="kss-nav__menu-item">
+<a class="kss-nav__menu-link" href="section-3.html">
+<span class="kss-nav__ref">3</span><span class="kss-nav__name">Grid</span>
+</a>
+</li>
+<li class="kss-nav__menu-item">
+<a class="kss-nav__menu-link" href="section-4.html">
+<span class="kss-nav__ref">4</span><span class="kss-nav__name">Button</span>
+</a>
+</li>
+<li class="kss-nav__menu-item">
+<a class="kss-nav__menu-link" href="section-5.html">
+<span class="kss-nav__ref">5</span><span class="kss-nav__name">Card</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<article role="main" class="kss-main st-main">
+<div class="c-container">
+<div class="c-section">
+<div class="c-section__inner">
+<div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+<h1 id="-">コーディングガイドライン</h1>
+<p>本サイトの開発環境、コーディングルール、モジュール集について記載しています。</p>
+<h2 id="-">開発環境</h2>
+<p>node、npmのインストールは済ませておいてください。(P.xx参照)</p>
+<h3 id="-">パッケージダウンロード</h3>
+<pre><code>npm i
+</code></pre><h3 id="-">パッケージ一覧</h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/gulp">gulp</a>(P.118参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a>(P.140参照)</li>
+<li><a href="https://www.npmjs.com/package/require-dir">require-dir</a>(P.140参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-sass-glob">gulp-sass-glob</a>(P.140参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-watch">gulp-watch</a>(P.148参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-plumber">gulp-plumber</a>(P.148参照)</li>
+<li><a href="https://www.npmjs.com/package/autoprefixer">autoprefixer</a>(P.152参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-postcss">gulp-postcss</a>(P.153参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-svg-sprites">gulp-svg-sprites</a>(P.154参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-imagemin">gulp-imagemin</a>(P.159参照)</li>
+<li><a href="https://www.npmjs.com/package/kss">kss</a>(P.178参照)</li>
+<li><a href="https://www.npmjs.com/package/run-sequence">run-sequence</a>(P.182参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-ejs">gulp-ejs</a>(P.231参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-data">gulp-data</a>(P.246参照)</li>
+<li><a href="https://www.npmjs.com/package/del">del</a>(P.248参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-copy">gulp-copy</a>(P.248参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-if">gulp-if</a>(P.248参照)</li>
+<li><a href="https://www.npmjs.com/package/csswring">csswring</a>(P.248参照)</li>
+<li><a href="https://www.npmjs.com/package/css-mqpacker">css-mqpacker</a>(P.248参照)</li>
+<li><a href="https://www.npmjs.com/package/gulp-minify-ejs">gulp-minify-ejs</a>(P.248参照)</li>
+</ul>
+<h3 id="-">タスク一覧</h3>
+<ul>
+<li><p>Sassのコンパイル、PostCssによる最適化(P.140参照)</p>
+<pre><code>npm run sass
+</code></pre></li>
+<li><p>ファイルの監視(P.148参照)</p>
+<pre><code>npm run watch
+</code></pre></li>
+<li><p>サイト構造部分のスプライト画像の生成(P.155参照)</p>
+<pre><code>npm run sprite:st
+</code></pre></li>
+<li><p>コンテンツ側のスプライト画像の生成(P.155参照)</p>
+<pre><code>npm run sprite:c
+</code></pre></li>
+<li><p>画像圧縮(P.159参照)</p>
+<pre><code>npm run imagemin
+</code></pre></li>
+<li><p>スタイルガイドの生成(P.179参照)</p>
+<pre><code>npm run kss
+</code></pre></li>
+<li><p>EJSのコンパイル(P.234参照)</p>
+<pre><code>npm run ejs
+</code></pre></li>
+</ul>
+<h3 id="-">ビルド一覧</h3>
+<ul>
+<li><p>開発用</p>
+<pre><code>npm run build
+</code></pre></li>
+<li><p>商用(P.249参照)</p>
+<pre><code>npm run build:prod
+</code></pre></li>
+</ul>
+<h3 id="-">ディレクトリ・ファイル構成</h3>
+<pre><code>.
+├── assets
+│   ├── ejs
+│   │   ├── _template.ejs
+│   │   ├── contents
+│   │   │   └── section
+│   │   │       └── _section_lv2.ejs
+│   │   ├── settings
+│   │   │   ├── _pages.json
+│   │   │   └── _variables.ejs
+│   │   └── structures
+│   │       ├── _footer.ejs
+│   │       └── _header.ejs
+│   ├── scss
+│   │   ├── base
+│   │   │   └── _normalize.scss
+│   │   ├── contents
+│   │   │   ├── _button.scss
+│   │   │   ├── _card.scss
+│   │   │   ├── _container.scss
+│   │   │   ├── _grid.scss
+│   │   │   ├── _heading.scss
+│   │   │   ├── _link.scss
+│   │   │   └── _section.scss
+│   │   ├── settings
+│   │   │   ├── _js.scss
+│   │   │   ├── _main.scss
+│   │   │   ├── _variables.scss
+│   │   │   └── _zindex.scss
+│   │   ├── structures
+│   │   │   ├── _footer.scss
+│   │   │   ├── _header.scss
+│   │   │   └── _main.scss
+│   │   ├── tools
+│   │   │   ├── functions
+│   │   │   │   └── _rem.scss
+│   │   │   └── mixins
+│   │   │       ├── _contentsSprite.scss
+│   │   │       ├── _hack.scss
+│   │   │       ├── _margin.scss
+│   │   │       ├── _mediaqueries.scss
+│   │   │       ├── _rem.scss
+│   │   │       ├── _structuresSprite.scss
+│   │   │       └── _wordbreak.scss
+│   │   └── trumps
+│   │       └── _col.scss
+│   ├── sprite
+│   │   ├── contents
+│   │   │   ├── arrow-circle-red.svg
+│   │   │   ├── chevron-red.svg
+│   │   │   ├── chevron-white.svg
+│   │   │   ├── external-gray.svg
+│   │   │   ├── external-white.svg
+│   │   │   └── facebook.svg
+│   │   ├── structures
+│   │   │   ├── contact.svg
+│   │   │   └── search.svg
+│   │   └── tmpl
+│   │       └── _mixins.scss
+│   └── styleguide
+│       ├── README.md
+│       ├── builder.js
+│       ├── index.hbs
+│       ├── kss-assets
+│       │   ├── WARNING.txt
+│       │   ├── github-fork--black.png
+│       │   ├── kss.css
+│       │   ├── kss.js
+│       │   ├── kss.scss
+│       │   ├── noise-low.png
+│       │   ├── prettify.js
+│       │   ├── sample-inline.png
+│       │   ├── sample-inline.svg
+│       │   ├── sample.png
+│       │   ├── sample.svg
+│       │   └── scrollspy.js
+│       └── package.json
+├── build
+│   ├── assets
+│   │   ├── css
+│   │   │   └── style.css
+│   │   ├── img
+│   │   │   ├── contents
+│   │   │   │   └── sprite.svg
+│   │   │   └── structures
+│   │   │       ├── logo.svg
+│   │   │       └── sprite.svg
+│   │   └── js
+│   │       └── ui.js
+│   ├── index.html
+│   ├── styleguide
+│   │   ├── index.html
+│   │   ├── kss-assets
+│   │   │   ├── WARNING.txt
+│   │   │   ├── github-fork--black.png
+│   │   │   ├── kss.css
+│   │   │   ├── kss.js
+│   │   │   ├── kss.scss
+│   │   │   ├── noise-low.png
+│   │   │   ├── prettify.js
+│   │   │   ├── sample-inline.png
+│   │   │   ├── sample-inline.svg
+│   │   │   ├── sample.png
+│   │   │   ├── sample.svg
+│   │   │   └── scrollspy.js
+│   │   ├── section-1.html
+│   │   ├── section-2.html
+│   │   ├── section-3.html
+│   │   ├── section-4.html
+│   │   └── section-5.html
+│   └── top
+│       └── assets
+│           ├── css
+│           │   └── local.css
+│           └── img
+│               ├── company.png
+│               ├── company_2.jpg
+│               ├── company_2_x2.jpg
+│               ├── company_x2.png
+│               ├── lab.jpg
+│               ├── lab_2.jpg
+│               ├── lab_3.jpg
+│               ├── main_anniversary.jpg
+│               ├── main_anniversary_x2.jpg
+│               ├── service.jpg
+│               ├── service_2.jpg
+│               ├── service_3.jpg
+│               └── service_4.jpg
+├── gulp
+│   ├── config.js
+│   └── tasks
+│       ├── clean.js
+│       ├── copy.js
+│       ├── ejs.js
+│       ├── imagemin.js
+│       ├── kss.js
+│       ├── sass.js
+│       ├── sprite.js
+│       └── watch.js
+├── gulpfile.js
+├── npm-shrinkwrap.json
+├── package.json
+└── src
+    ├── assets
+    │   ├── css
+    │   │   └── style.scss
+    │   ├── img
+    │   │   ├── contents
+    │   │   │   └── sprite.svg
+    │   │   └── structures
+    │   │       ├── logo.svg
+    │   │       └── sprite.svg
+    │   └── js
+    │       └── ui.js
+    ├── index.ejs
+    └── top
+        └── assets
+            ├── css
+            │   └── local.scss
+            └── img
+                ├── company.png
+                ├── company_2.jpg
+                ├── company_2_x2.jpg
+                ├── company_x2.png
+                ├── lab.jpg
+                ├── lab_2.jpg
+                ├── lab_3.jpg
+                ├── main_anniversary.jpg
+                ├── main_anniversary_x2.jpg
+                ├── service.jpg
+                ├── service_2.jpg
+                ├── service_3.jpg
+                └── service_4.jpg
+</code></pre><h2 id="-">コーディングスキーマ</h2>
+<h3 id="-">対象環境</h3>
+<p>サンプルサイトで想定しているユーザー環境について定義します。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>os</th>
+<th>推奨環境</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>パソコン</strong></td>
+<td>- Windows <br>- MacOS X (macOS)</td>
+<td>- Windows IE 11 <br>- Windows Firefox 最新版 <br>- Windows Google Chrome 最新版 <br>- MacOSX Firefox 最新版 <br>- MacOSX Google Chrome 最新版</td>
+</tr>
+<tr>
+<td><strong>スマートフォン</strong> <br> <strong>タブレット</strong></td>
+<td>- iOS 8.0 <br>- Android 5.0</td>
+<td>- Mobile Safari <br>- Google Chrome</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">レスポンシブ</h3>
+<ul>
+<li>ラージビュー<br>
+801px以上</li>
+<li>ミディアムビュー<br>
+601px〜800px</li>
+<li>スモールビュー<br>
+600px以下</li>
+</ul>
+<h4 id="-">メディアクエリの指定方法</h4>
+<p>ラージスクリーン・ファーストとする。</p>
+<pre><code>/* 大画面サイズのCSS */
+.c-disp {display: none;} 
+
+@media (max-width: 800px) { 
+    /* 中画面サイズのCSS */ 
+    .c-disp {display: block;} 
+} 
+
+@media (max-width: 600px) { 
+    /* 小画面サイズのCSS */ 
+    .c-disp {display: none;} 
+}
+
+/* Mixinを使ったコード */
+@include max-screen($BREAK_POINT_MD) {
+    /* 中画面サイズのCSS */ 
+    .c-disp {display: block;} 
+}
+@include max-screen($BREAK_POINT_SM) {
+    /* 小画面サイズのCSS */
+    .c-disp {display: none;} 
+}
+</code></pre><h4 id="viewport-">viewport指定</h4>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+</code></pre><h2 id="-">コーディングルール</h2>
+<h3 id="scss-">SCSSファイル</h3>
+<h4 id="-">ディレクトリ構成</h4>
+<table>
+<thead>
+<tr>
+<th>ルート</th>
+<th>第2階層</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scss</td>
+<td>settings</td>
+<td>サイト共通の設定ファイルの管理</td>
+</tr>
+<tr>
+<td></td>
+<td>tools</td>
+<td>mixin、function</td>
+</tr>
+<tr>
+<td></td>
+<td>base</td>
+<td>リセットCSS</td>
+</tr>
+<tr>
+<td></td>
+<td>structures</td>
+<td>サイト共通の構造部分を定義</td>
+</tr>
+<tr>
+<td></td>
+<td>contents</td>
+<td>コンテンツモジュール</td>
+</tr>
+<tr>
+<td></td>
+<td>trumps</td>
+<td>ヘルパークラス</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">ファイル構成</h4>
+<p>モジュールはカテゴリー毎にファイルを分けて管理します。</p>
+<pre><code>scss
+├── base
+│   └── _normalize.scss
+├── contents
+│   ├── _button.scss
+│   ├── _card.scss
+│   ├── _container.scss
+│   ├── _grid.scss
+│   ├── _heading.scss
+│   ├── _link.scss
+│   └── _section.scss
+├── settings
+│   ├── _js.scss
+│   ├── _main.scss
+│   ├── _variables.scss
+│   └── _zindex.scss
+├── structures
+│   ├── _footer.scss
+│   ├── _header.scss
+│   └── _main.scss
+├── tools
+│   ├── functions
+│   │   └── _rem.scss
+│   └── mixins
+│       ├── _contentsSprite.scss
+│       ├── _hack.scss
+│       ├── _margin.scss
+│       ├── _mediaqueries.scss
+│       ├── _rem.scss
+│       ├── _structuresSprite.scss
+│       └── _wordbreak.scss
+└── trumps
+    └── _col.scss
+</code></pre><h4 id="-">命名ルール</h4>
+<p>MindBEMding（P.xx）をベースにカスタマイズしたものを採用しています。<br>
+各モジュールには役割と管理を区別するためにプレフィックスを用います。<br>
+JavaScriptによる状態の切り替えでクラス名を利用する場合、SMACSS の状態（ステート）ルールを参考にis-プレフィックスを使用します。<br></p>
+<ul>
+<li>structures - <code>.st-カテゴリー名-*</code></li>
+<li>contents - <code>.c-カテゴリー名-*</code></li>
+<li>trumps - <code>.u-カテゴリー名-*</code></li>
+</ul>
+<p>カスタムデータ属性<br></p>
+<ul>
+<li>structures - <code>data-カテゴリー名-*</code></li>
+<li>contents - <code>data-カテゴリー名-*</code></li>
+<li>trumps - <code>data-u-カテゴリー名-*</code></li>
+</ul>
+<p>カスタムデータ属性そのものにルールを持たせる場合は必ずtrumpsに格納すること。</p>
+<h3 id="ejs-">EJSファイル</h3>
+<h4 id="-">ディレクトリ構成</h4>
+<table>
+<thead>
+<tr>
+<th>ルート</th>
+<th>第2階層</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ejs</td>
+<td>settings</td>
+<td>サイト共通の設定ファイルの管理</td>
+</tr>
+<tr>
+<td></td>
+<td>structures</td>
+<td>サイト共通の構造部分を定義</td>
+</tr>
+<tr>
+<td></td>
+<td>contents</td>
+<td>コンテンツモジュール、パターンの定義</td>
+</tr>
+</tbody>
+</table>
+<h3 id="svg-">SVGスプライト</h3>
+<h4 id="-">ディレクトリ構成</h4>
+<table>
+<thead>
+<tr>
+<th>ルート</th>
+<th>第2階層</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sprite</td>
+<td>tmpl</td>
+<td>mixinファイルの基となるテンプレートファイル</td>
+</tr>
+<tr>
+<td></td>
+<td>structures</td>
+<td>サイト共通の構造部分の画像管理</td>
+</tr>
+<tr>
+<td></td>
+<td>contents</td>
+<td>コンテンツモジュールの画像管理</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">スタイルガイド</h3>
+<h4 id="-">ディレクトリ構成</h4>
+<table>
+<thead>
+<tr>
+<th>ルート</th>
+<th>第2階層</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>styleguide</td>
+<td>kss-assets</td>
+<td>スタイルガイド生成用のリソースファイルを管理。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">ファイル構成</h4>
+<pre><code>styleguide
+├── README.md // ドキュメントファイル
+├── builder.js
+├── index.hbs // スタイルガイド用テンプレート
+├── kss-assets
+└── package.json
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<footer class="st-footer" role="contentinfo">
+<div class="st-footer__utility">
+<div class="st-footer__inner">
+<ul class="st-footer__infoNav">
+<li><a class="st-footer__link" href="#">ACCESS</a></li>
+<li><a class="st-footer__link" href="#">MAP</a></li>
+<li><a class="st-footer__link" href="#">ABOUT THIS SITE</a></li>
+<li><a class="st-footer__link" href="#">SECURITY POLICY</a></li>
+<li><a class="st-footer__link" href="#">PRIVACY POLICY</a></li>
+<li><a class="st-footer__link" href="#">TRADEMARKS</a></li>
+<li><a class="st-footer__contact" href="#">CONTACT</a></li>
+</ul>
+<p class="st-footer__copyright">Copyright &copy; 2016 IMJ Corporation. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script>
+prettyPrint();
+var spy = new ScrollSpy('#kss-node', {
+nav: '.kss-nav__menu-child > li > a',
+className: 'is-in-viewport'
+});
+</script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
