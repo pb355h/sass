@@ -20,6 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.4",
+    "browser-sync": "^2.26.5",
     "css-mqpacker": "^5.0.1",
     "csswring": "^5.1.1",
     "del": "^2.2.2",
